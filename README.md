@@ -16,4 +16,4 @@
 
 ## Reflection
 
-setState() is what tells Flutter to redraw the screen after something changes. If I just change a variable like the counter without calling setState(), the value does change, but Flutter has no way of knowing it needs to update the screen, so the old number just stays there. Once I put the change inside setState(), Flutter rebuilds that part of the screen and shows the new value. That's why I used it twice in my code, once for increment and once for reset, because each one changes different data and needs its own update.
+setState() tells Flutter that something has changed and the screen needs to be updated.If I change the counter value without using setState() then value changes in the code but the new value may not appear on the screen.When I use setState() the flutter rebuilds the screen and shows the updated value.I've used setState() in both the increment and reset functions because both functions change the counter.
