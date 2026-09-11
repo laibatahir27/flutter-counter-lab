@@ -1,44 +1,51 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget{
+// Personal Parameters
+// Name        :Laiba Tahir
+// Roll Number :04072313014
+// myThreshold :sum of last 3 digits of roll number (0+1+4=5)+5=10
+// mySeedColor :lightBlue (L matches "Laiba")
+
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
+        colorSchemeSeed: Colors.lightBlue,
       ),
-      home: const MyHomePage(title: 'Counter App'),
+      home: const MyHomePage(title: 'CS 442 Week 1 Lab Task'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget{
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>{
-  int _counter= 0;
-  int _resetCount= 0;
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+  int _resetCount = 0;
   final int myThreshold = 10;
 
-  void _incrementCounter(){
+  void _incrementCounter() {
     setState(() {
       _counter++;
     });
   }
 
-  void _resetCounter(){
+  void _resetCounter() {
     setState(() {
       _counter = 0;
       _resetCount++;
@@ -46,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage>{
   }
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -79,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage>{
             ),
           ],
         ),
-      ),   
+      ),
       floatingActionButton: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
